@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Agregar Vehiculo
+    </div>
+    <div class="card-body">
+      <form  (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="">Patente</label>
+          <input required maxlength="6" type="text" class="form-control" required [(ngModel)]="vehiculo.patente"  name="patente">
+        </div>
+        <div class="form-group">
+          <label for="">Marca</label>
+          <input type="text" class="form-control" required [(ngModel)]="vehiculo.marca"  name="marca">
+        </div>
+        <div class="form-group">
+          <label for="">Modelo</label>
+          <input type="text" class="form-control" required [(ngModel)]="vehiculo.modelo"  name="modelo">
+        </div>
+        <div class="form-group">
+          <label for="">Version</label>
+          <input type="number" class="form-control" required [(ngModel)]="vehiculo.version"  name="version">
+        </div>
+        <div class="form-group">
+          <label for="">Precio</label>
+          <input type="number" class="form-control" required [(ngModel)]="vehiculo.precio"  name="precio">
+        </div>
+        <div class="form-group">
+          <label for="">Catidad de cuotas</label>
+          <select class="form-control" id="cantidadCuota" required [(ngModel)]="vehiculo.cantidadCuota"  name="cantidadCuota">
+            <option value=12>12</option>
+            <option value=24>24</option>
+            <option value=48>48</option>       
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Estado</label>
+          <select class="form-control" id="estado" required [(ngModel)]="vehiculo.estado"  name="estado">
+            <option value="en venta">EN VENTA</option>
+            <option value="pagos pendientes">PAGOS PENDIENTES</option>
+            <option value="pagos finalizados">PAGOS FINALIZADOS</option>
+            <option value="eliminado">ELIMINADO</option>      
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Agregar</button>
+     
+      </form>
+    </div>
+  </div>
+</div>

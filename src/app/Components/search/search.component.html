@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Buscar Vehiculo
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="lastname">ID del Vehiculo</label>
+          <input type="text" class="form-control" id="_id" required [(ngModel)]="_id" name="_id">
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn btn-success">Buscar</button>
+        </div>
+      </form>
+      <!-- TODD Mostrar mensaje si no encuentra la entidad -->
+      <ul>
+        <li>
+          <label>ID: {{vehiculo._id}}</label>
+        </li>
+        <li>
+          <label>Patente: {{vehiculo.patente}}</label>
+        </li>
+        <li>
+          <label>Marca: {{vehiculo.marca}}</label>
+        </li>
+        <li>
+          <label>Modelo: {{vehiculo.modelo}}</label>
+        </li>
+        <li>
+          <label>Version: {{vehiculo.version}}</label>
+        </li>
+        <li>
+          <label>Precio: ${{vehiculo.precio}}</label>
+        </li>
+        <li>
+          <label>Catidad de cuotas: {{vehiculo.cantidadCuota}}</label>
+        </li>
+        <li>
+          <label>Valor de la Cuota: ${{vehiculo.valorCuota}}</label>
+        </li>
+        <li>
+          <label>Estado: {{vehiculo.estado}}</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

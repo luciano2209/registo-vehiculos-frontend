@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Lista de Vehiculos
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <td>Id</td>
+            <td>Patente</td>
+            <td>Marca</td>
+            <td>Modelo</td>
+            <td>Version</td>
+            <td>Precio</td>
+            <td>Cantidad Cuotas</td>
+            <td>Interes</td>
+            <td>Valor Cuota</td>
+            <td>Estado</td>
+            <td>Accion</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of vehiculos" class="text-center">
+            <td>{{vehiculo._id}}</td>
+            <td>{{vehiculo.patente}}</td>
+            <td>{{vehiculo.marca}}</td>
+            <td>{{vehiculo.modelo}}</td>
+            <td>{{vehiculo.version}}</td>
+            <td>{{vehiculo.precio}}</td>
+            <td>{{vehiculo.cantidadCuota}}</td>
+            <td>{{vehiculo.interes}}</td>
+            <td>{{vehiculo.valorCuota}}</td>
+            <td>{{vehiculo.estado}}</td>
+            <td>
+              <button (click)="eliminar(vehiculo)" class="btn btn-danger">Eliminar</button>
+              <button (click)="onPress(vehiculo)" class="btn btn-success">editar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- TODD Cambiar por un componente Modal -->
+<div id="comp-render" *ngIf="display">
+  <br/>
+  <app-update [vehiculo]="dataUpdate"></app-update>
+</div>
